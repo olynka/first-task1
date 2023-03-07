@@ -1,11 +1,14 @@
 
 
-const N = +prompt('Введіть число');
+const N = +prompt('Введіть число N');
 const auditN = Number.isInteger(N);
+console.log(`перевірка на ціле число N ${auditN}`);
 
 
-const M = +prompt('Введіть число');
-const auditM=Number.isInteger(M)
+
+const M = +prompt('Введіть число M');
+const auditM = Number.isInteger(M);
+console.log(`перевірка на ціле число N ${auditM}`);
 
 
 if ((!auditN)||!(auditM)) {
