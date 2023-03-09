@@ -1,23 +1,24 @@
 // version 1
 
 // перше число від якого відштовхуємося
-const N = +prompt('Введіть число N');
-const auditN = Number.isInteger(N);
+let N;
+// перевіряємо чи цілі  числа циклом while
+while ((!Number.isInteger(N))||N<0) {
+    N = +prompt('Введіть правельне число N');
+}
+
 
 // друге число до якого проганяємо цикл
-const M = +prompt('Введіть число M');
-const auditM = Number.isInteger(M);
+let M;
+// перевіряємо чи цілі  числа циклом while
+while ((!Number.isInteger(M))| M<=N) {
+   M = +prompt('Введіть правельне число  M');
+}
+
+
 
 let sum = 0;
 
-// перевіряємо чи цілі  числа циклом while
-while ((!auditN)||!N>0) {
-  alert(`Введіть цілі числа`)
-}
-
-while ((!auditM)||!M>N) {
-  alert(`Введіть цілі числа`)
-}
 
 // отримуємо інформацію отримуємо інформацію про те чи потрібно пропускати парні числа
 const IsSteamy = confirm("Потрібно пропускати парні?");
