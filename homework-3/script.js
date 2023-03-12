@@ -1,4 +1,20 @@
+//функція 1
 
+const getMaxDigit = (number) => {
+    let maxNumber = 0;
+   
+    let number2 = number.toString();
+  
+    for (let i = 0; i < number2.length; i++) {
+       
+      const beginning = parseInt(number2[i]);
+      if (beginning > maxNumber) {
+        maxNumber = beginning;
+      }
+    }
+    
+    return maxNumber
+}
 //функція 3
 
 const name = (word) => {
@@ -95,6 +111,8 @@ const chars = "012345678910";
 
 
 
+
+document.writeln(`Функція No1: ${getMaxDigit(1232526763671)},|`);
 document.writeln(`Функція No3: ${name("Olya")},|`);
 document.writeln(`Функція No4: ${sum(1000)},|`);
 document.writeln(`Функція No5: ${getRandomNumber(1, 10)},|`);
