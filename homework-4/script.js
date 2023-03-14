@@ -5,7 +5,7 @@ const themes = ["Диференційне рівняння", "Теорія ав�
 const marks = [4, 5, 5, 3, 4, 5];
 
 
-function filtration (parameter)  {
+function filtration (students)  {
     let men = [];
     let women = [];
     let menWomen = [];
@@ -38,7 +38,6 @@ console.log(filtration(students));
 
 function taskPairs(menWomens,themes ) {
  
-
     let themeСommands = [];
   
     for (let i = 0; i <menWomens.length; i++) {
@@ -55,13 +54,14 @@ console.log(taskPairs(filtration(students), themes));
 
 
 function estimation(student, rating) {
-    let estimation= [];
+
+    let estimation = [];
+    
     for (let i = 0; i <student.length; i++) {
         const ratings = (`${student[i]}, ${rating[i]}`).split(",");
         
         estimation.push(ratings)
-      
-
+    
      }
 return estimation
 }
@@ -69,18 +69,16 @@ return estimation
 console.log(estimation(students, marks));
 
 
+
 function assessmentProject(datas) {
 
     let result = [];
 
-   
-    
     for (let i = 0; i < datas.length; i++) {
   let discount = (Math.random() * 5).toFixed();
           const f =datas[i].concat(Number(discount)) ;
-
+    
         result.push(f)
-
      }
 
      
@@ -88,17 +86,3 @@ return result
 }
 
 console.log(assessmentProject(taskPairs(filtration(students),themes)));
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
