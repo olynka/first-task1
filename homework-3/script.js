@@ -125,6 +125,27 @@ const deleteLetters = (letter,word) => {
 return newWord
 }
 
+const deleteLettersр = (word) => {
+    let newWord = "";
+    const wordSpelt = word.split('');
+   
+   
+    for (let i = 0; i <= wordSpelt.length; i++){
+
+        if (wordSpelt[i] === wordSpelt[i]) {
+
+            const g = wordSpelt.indexOf(wordSpelt[i]);
+            console.log(g);
+            const cut = wordSpelt.splice(g, 1);
+          
+           newWord=wordSpelt.join('');
+        }
+   }
+    
+return newWord
+}
+
+
 
 
 document.writeln(`Функція No1: ${getMaxDigit(1232526763671)},|`);
@@ -134,7 +155,8 @@ document.writeln(`Функція No5: ${getRandomNumber(1, 10)},|`);
 document.writeln(`Функція No6: ${countLetter("t", "tsgthtTTtTYTTTttttTtshttt")},|`);
 document.writeln(`Функція No7,8: ${convertCurrency("3900грн")},|`);
 document.writeln(`Функція No9: ${getRandomPassword()},|`);
-document.writeln(`Функція No10: ${deleteLetters('a', "blablabla")},|`);
+document.writeln(`Функція No10: ${deleteLetters("a", "blablabla")},|`);
+document.writeln(`Функція No11: ${deleteLettersр("abgba")},|`);
 
 
 
