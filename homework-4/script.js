@@ -85,4 +85,6 @@ function assessmentProject(datas) {
 return result
 }
 
-console.log(assessmentProject(taskPairs(filtration(students),themes)));
+console.log(assessmentProject(taskPairs(filtration(students), themes)));
+
+
