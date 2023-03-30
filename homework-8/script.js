@@ -32,7 +32,7 @@ class Student{
     }
     dismiss() {
         this.student = false;
-       return `Cтудента ${this.fullName} виключено з вуза`
+       return null
     }
     recover() {
         this.student = true;
