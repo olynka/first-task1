@@ -1,35 +1,17 @@
 
 function generateBlocks() {
     const block = document.querySelector('.scene');
-    console.log(block);
+    const blocks = 25;
 
-    block.innerHTML+=`<div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>`
-
+    for (let i = 0; i < blocks; i++) {
+        const d =document.createElement("div");
+        d.classList.add('box');
+         block.append(d);
+        console.log(d);
+        
+    }
     let g = document.querySelectorAll('.box');
+    console.log();
    
   for (let i= 0; i < g.length; i++) {
       g[i].style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -41,7 +23,7 @@ function generateBlocks() {
   
   }
  
-  return
+  return 3
 };
 
 
@@ -55,13 +37,8 @@ function generateBlocksInterval() {
     }, 1000);
     
 
-    return 
+    return 6
 }
-
-
-
-    
-
 
 console.log(generateBlocks());
 console.log(generateBlocksInterval());
