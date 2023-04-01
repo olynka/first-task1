@@ -43,7 +43,7 @@ const button = document.querySelector('.button');
 
 
 const handleClick = () => {
-     let g = document.querySelectorAll('.box');
+  
     generateBlocksInterval()
   
     
