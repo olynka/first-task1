@@ -9,7 +9,8 @@ function generateBlocks() {
          block.append(div);
         
     }
-   const bocksChildren = document.querySelectorAll('.box'); 
+    const bocksChildren = document.querySelectorAll('.box'); 
+    console.log(bocksChildren);
     
   for (let i= 0; i < bocksChildren.length; i++) {
      bocksChildren[i].style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -45,11 +46,8 @@ const button = document.querySelector('.button');
 const handleClick = () => {
   
     generateBlocksInterval()
-  
-    
+ 
 };
-
-
 button.addEventListener("click", handleClick);
 
 
