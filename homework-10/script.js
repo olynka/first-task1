@@ -26,19 +26,19 @@ function generateBlocks() {
       keyboard: 'H',
       names:'RIDE' },
     {
-      src: 'sounds/error-126627.mp3',
+      src: 'sounds/690c1f826b18139.mp3',
       keyboard: 'J',
       names:'SNARE' 
     },
       
     {
-      src: 'sounds/error-126627.mp3',
+      src: 'sounds/audio_p.mp3',
       keyboard: 'K',
       names:'TOM' 
     },
       
     {
-      src: 'sounds/error-126627.mp3',
+      src: 'sounds/adad00544f841e9.mp3',
       keyboard: 'L',
       names:'TINK' 
     },
