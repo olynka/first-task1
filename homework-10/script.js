@@ -1,7 +1,7 @@
 function generateBlocks() {
   const block = document.querySelector('.scene');
 
-  const soungs = [
+  const sounds = [
     {
       src: 'sounds/a-sudden-appearance-143034.mp3',
       keyboard: 'A',
@@ -17,11 +17,6 @@ function generateBlocks() {
       names:'KICK' 
     },
       
-    {
-      src: 'sounds/notifications-sound-127856.mp3',
-      keyboard: 'F',
-      names:'OPENHAT' 
-    },
     {
      src: 'sounds/short-success-sound-glockenspiel-treasure-video-game-6346.mp3',
      keyboard: 'G',
@@ -50,7 +45,7 @@ function generateBlocks() {
     
   ];
   
-  const markup = soungs
+  const markup = sounds
     .map(({ src,keyboard,names}) => `<div class='key'><h2 class="letter">${keyboard}</h2><p class="sound">${names}</p></div><audio class="yourAudio" preload="auto">
         <source src=${src} type='audio/wav' />
     </audio>`)
@@ -86,7 +81,7 @@ for (let i = 0; i < bocksChildren .length; i++) {
         })
     document.addEventListener("keydown", event => {
       const key = [];
-        for(const soung of soungs){
+        for(const soung of sounds){
           key.push(soung.keyboard);
            for (let i = 0; i < key.length; i++) {
              if (key[i] === (event.key).toUpperCase()) {

@@ -1,29 +1,13 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(kontserti-dlya-tineidzherov-48b0307f-cefc-29b3-e32e-81fa033f324a.jpg);
+    background-image: url(/homework-10/picture/kontserti-dlya-tineidzherov-48b0307f-cefc-29b3-e32e-81fa033f324a.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
   
 }
-
-/* .key{
-width: 80px;
-height: 80px;
-background-color:rgba(0, 0, 0, 0.2);;
-border: thick double whitesmoke;
-display: block;
-margin: 30px;
-text-align: center;
-justify-content: center;
-text-shadow:0 0 0.5rem black;
-border-radius: 10px;
-transition:all .07s ease.07s ease;
-cursor: pointer;
-
-} */
 
 .scene{
     display: flex;
