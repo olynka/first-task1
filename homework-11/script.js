@@ -1,19 +1,30 @@
-function getRandomChinese(length) {
-   const j = [];
-    while (j.length <= length - 1) {
+function getRandomChinese(lengths) {
+
+       const  result = [];
+    
+    while ( result.length <= lengths - 1) {
          
         const sign = String(Date.now()).slice(8, Date.now().length);
+       
+         result.push(String.fromCharCode(sign));
+        
+      console.log(sign);
+             
+    }
 
-        j.push(String.fromCharCode(sign));
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => { 
+            resolve(result.join(""));
+        },lengths*500)
+});
+    return promise
+} 
+     
+getRandomChinese(6).then(result=>console.log(result)).catch(error => {
+    console.log(error);
+  });
 
-        setTimeout(() => {
-             console.log(j.join(""))
-        },length*50)
 
 
-           }
-   return
-}
 
-console.log(getRandomChinese(6));
 
