@@ -1,0 +1,99 @@
+body{
+    background-image: url(images/galaxias.jpg);
+    background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+        text-align: center;
+}
+
+header {
+    position: relative;
+    height: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: rgba(0, 0, 0, 0.56); */
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),}
+
+
+.load-more {      
+ background-color: blueviolet;
+     color: aliceblue;
+      border-radius: 20px;
+                        }
+
+.is-hidden {
+display: none;
+}
+
+                                                
+.search-form {
+padding: 50px;
+    }
+
+    .gallery-image{
+    display: block;
+    width: 180px; 
+    height: 180px;
+    padding: 10px;
+    }
+
+        .user-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .gallery-name{
+            color: aliceblue;
+        }
+        .gallery-image-film{
+            display: block;
+                width: 150px;
+                height: 180px;
+                padding: 10px;
+        }
+        .gallery-item{
+    border: thick double #fff;
+    border-radius: 10px;
+    margin: 10px;
+        }
+        .btn{
+        font-family: 'Dancing Script', cursive;
+            background-color:rgb(224, 221, 221);
+            border-radius: 10px;
+            cursor: pointer;
+            height: 50px;
+                width: 70px;
+        }
+        .title{
+            font-family: 'Sedgwick Ave Display',
+                    cursive;
+                    color: aliceblue;
+
+        }
+                .btnFilm{
+            font-family: 'Dancing Script', cursive;
+                background-color: rgb(220, 213, 213);
+                border-radius: 10px;
+                cursor: pointer;
+                height: 50px;
+                    width: 70px;
+                }
+                .btnCharacters{
+                    font-family: 'Dancing Script', cursive;
+                        background-color: rgb(233, 224, 224);
+                        border-radius: 10px;
+                        cursor: pointer;
+                      height: 50px;
+                      width: 70px;
+                }
+                .input-form{
+                font-family: 'Dancing Script', cursive;
+                    background-color: rgb(255, 255, 255);
+                    height: 30px;
+                    margin-bottom: 30px;
+                        width: 250px;
+                }
+
+      
+                
