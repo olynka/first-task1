@@ -61,11 +61,6 @@ console.log(chapter);
     
     }
 
-
-
-
-// newStarWarsApi.getFilmsId()
-
 function getCharacterFilmId(number) {
        getFilmsId(number).then((e) => { return (e.characters)}).then(a => a.forEach(a => { 
        fetch(a).then(
@@ -102,6 +97,7 @@ btnCharacters.addEventListener('click', () => {
      if(chapters===''){getCharacter().then((character) =>renderCharacterList(character.results))
        .catch((error) => console.log(error));
      } else {
+        document.querySelector(".user-list").innerHTML = ""
        getCharacterFilmId(document.querySelector(".input-form").value)
   }
   return chapter=chapters
@@ -144,5 +140,7 @@ function renderCharacterList(characters) {
     .join("");
   userList.innerHTML = markup;
 }
+
+
 
 
