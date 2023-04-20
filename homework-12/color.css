@@ -18,9 +18,12 @@ header {
 
 
 .load-more {      
- background-color: blueviolet;
-     color: aliceblue;
-      border-radius: 20px;
+    font-family: 'Dancing Script', cursive;
+        background-color: rgb(224, 221, 221);
+        border-radius: 10px;
+        cursor: pointer;
+        height: 50px;
+        width: 70px;
                         }
 
 .is-hidden {

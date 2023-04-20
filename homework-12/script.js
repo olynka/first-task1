@@ -1,11 +1,14 @@
 const fetchUsersBtn = document.querySelector(".btn");
+const nextPlanet = document.querySelector(".load-more");
 const userList = document.querySelector(".user-list");
 const btnFilm = document.querySelector(".btnFilm");
 const btnCharacters = document.querySelector(".btnCharacters");
 const form = document.querySelector(".input-form");
 
-let chapter='' ;
-console.log(chapter);
+
+
+
+
 
 
 
@@ -22,12 +25,13 @@ console.log(chapter);
     
     }
 
-    async function getPlanets() {
-        const getPlanets=await fetch("https://swapi.dev/api/planets/").then(
+    async function getPlanets(planet) {
+        const getPlanets=await fetch(planet).then(
     (response) => {
       if (!response.ok) {
         throw new Error(response.status);
-      }
+            }
+            
       return response.json();
     }
         )
@@ -53,7 +57,8 @@ console.log(chapter);
     (response) => {
       if (!response.ok) {
         throw new Error(response.status);
-      }
+            }
+            
       return response.json();
     }
         )
@@ -62,12 +67,14 @@ console.log(chapter);
     }
 
 function getCharacterFilmId(number) {
+
        getFilmsId(number).then((e) => { return (e.characters)}).then(a => a.forEach(a => { 
        fetch(a).then(
      (response) => {
       if (!response.ok) {
         throw new Error(response.status);
-      }
+           }
+           
       return response.json();
       
     }).then(a=>{userList.innerHTML+=(`<li class="gallery-item"><p class="gallery-name"><b>Name</b>: ${a.name}</p>
@@ -76,17 +83,48 @@ function getCharacterFilmId(number) {
            <img src="images/characters/${a.name}.jpg" alt="no pic" class="gallery-image-film" />
         </li>`
     )
+    
+      
     })
         
     }))
    }
- fetchUsersBtn.addEventListener('click', () => {
-    getPlanets().then((planet) =>renderUserList(planet.results))
+fetchUsersBtn.addEventListener('click', () => {
+
+  
+  nextPlanet.classList.remove('is-hidden');
+
+  getPlanets("https://swapi.dev/api/planets/").then((planet) => {
+      
+   firstPlanet=planet.next;
+    renderUserList(planet.results)
+  })
          .catch((error) => console.log(error));
  })
 
  btnFilm.addEventListener('click', () => {
   getFilm().then((character) => renderFilmList(character.results))
+         .catch((error) => console.log(error));
+ })
+
+
+
+
+ const counter = {
+     value: 0,
+    handelbuttonDecrement() {
+        this.value -=1
+    },
+      handelbuttonIncrement() {
+          this.value +=1      
+    }
+
+}
+nextPlanet.addEventListener('click', () => {
+
+   counter.handelbuttonIncrement();
+
+   getPlanets(`https://swapi.dev/api/planets/?page=${counter.value}`).then((character) => renderUserList(character.results))
          .catch((error) => console.log(error));
  })
 
@@ -100,10 +138,11 @@ btnCharacters.addEventListener('click', () => {
         document.querySelector(".user-list").innerHTML = ""
        getCharacterFilmId(document.querySelector(".input-form").value)
   }
-  return chapter=chapters
+  return 
 })
  
 function renderUserList(planets) {
+
   const markup = planets
       .map((planet) => {
       return `<li class="gallery-item"><p class="gallery-name"><b>Name</b>: ${planet.name}</p>
@@ -113,6 +152,7 @@ function renderUserList(planets) {
     })
     .join("");
   userList.innerHTML = markup;
+
 }
 
 function renderFilmList(films) {
@@ -140,7 +180,3 @@ function renderCharacterList(characters) {
     .join("");
   userList.innerHTML = markup;
 }
-
-
-
-
