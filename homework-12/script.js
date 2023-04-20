@@ -111,7 +111,7 @@ fetchUsersBtn.addEventListener('click', () => {
 
 
  const counter = {
-     value: 0,
+     value: 1,
     handelbuttonDecrement() {
         this.value -=1
     },
