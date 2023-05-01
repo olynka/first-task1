@@ -1,11 +1,11 @@
-console.log('hello');
+
 import { max } from "./scr/hm1.js";
 import { getMaxDigit } from "./scr/hm3.js";
 import { filtration,students} from "./scr/hm4.js";
 import { getRandomArray } from "./scr/hm5.js";
 import { getSubjects, student } from "./scr/hm6.js";
 import { ukraine, getMyTaxes } from "./scr/hm7.js";
-import { Student, newStudent } from "./scr/hm8.js";
+import {  newStudent } from "./scr/hm8.js";
 import { getRandomChinese } from "./scr/hm11.js";
 
 

@@ -39,5 +39,3 @@ export function getSubjects(student)
       }
       return result
 }
-console.log(`функція 1`);
-console.log(getSubjects(student[2]));
