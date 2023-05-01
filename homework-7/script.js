@@ -1,7 +1,7 @@
 
 
 
-const ukraine = {
+ const ukraine = {
     tax: 0.195,
     middleSalary: 1789,
     vacancies: 11476

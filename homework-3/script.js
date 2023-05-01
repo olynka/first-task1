@@ -1,6 +1,6 @@
 //функція 1
 
-const getMaxDigit = (number) => {
+export const getMaxDigit = (number) => {
     let maxNumber = 0;
    
     let number2 = number.toString();
